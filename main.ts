@@ -13,7 +13,7 @@ const html = /* html */ `<!doctype html>
     <script type="module">
       async function ipv4() {
         try {
-          const req = await fetch("https://ipv4.debug.lcas.dev", { headers: { accept: "application/json" }});
+          const req = await fetch("https://ipv4.debug.lcas.dev", { headers: { accept: "application/json", mode: "no-cors" }});
           const { ip } = await req.json();
           document.getElementById("ipv4").innerText = ip;
         } catch(err) {
@@ -22,7 +22,7 @@ const html = /* html */ `<!doctype html>
       }
       async function ipv6() {
         try {
-          const req = await fetch("https://ipv6.debug.lcas.dev", { headers: { accept: "application/json" }});
+          const req = await fetch("https://ipv6.debug.lcas.dev", { headers: { accept: "application/json", mode: "no-cors" }});
           const { ip } = await req.json();
           document.getElementById("ipv6").innerText = ip;
         } catch(err) {
